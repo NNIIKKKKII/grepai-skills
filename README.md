@@ -24,25 +24,31 @@
 ## Quick Install
 
 ```bash
-npx add-skill yoanbernabeu/grepai-skills
+npx skills add yoanbernabeu/grepai-skills
 ```
 
-**That's it.** Works with Claude Code, Cursor, Codex, OpenCode, Windsurf, and 20+ AI agents.
+**That's it.** Works with Claude Code, Cursor, Codex, OpenCode, Windsurf, and 30+ AI agents.
 
 ### One-Liners
 
 ```bash
 # Install everything (27 skills)
-npx add-skill yoanbernabeu/grepai-skills
+npx skills add yoanbernabeu/grepai-skills
 
 # Install only search skills
-npx add-skill yoanbernabeu/grepai-skills --skill grepai-search-basics
+npx skills add yoanbernabeu/grepai-skills --skill grepai-search-basics
 
 # Install globally (available in all projects)
-npx add-skill yoanbernabeu/grepai-skills --global
+npx skills add yoanbernabeu/grepai-skills -g
 
 # List all available skills
-npx add-skill yoanbernabeu/grepai-skills --list
+npx skills add yoanbernabeu/grepai-skills --list
+
+# Install to specific agents
+npx skills add yoanbernabeu/grepai-skills -a claude-code -a cursor
+
+# Non-interactive (CI/CD friendly)
+npx skills add yoanbernabeu/grepai-skills --all -y
 ```
 
 ### Other Installation Methods
@@ -214,7 +220,7 @@ Just ask your AI agent:
 
 ## Quick Start Guide
 
-1. **Install**: `npx add-skill yoanbernabeu/grepai-skills`
+1. **Install**: `npx skills add yoanbernabeu/grepai-skills`
 2. **Setup GrepAI**: Follow `grepai-installation` skill
 3. **Setup Ollama**: Follow `grepai-ollama-setup` skill
 4. **Initialize**: `grepai init` in your project
@@ -264,7 +270,8 @@ grepai search "authentication" --json --compact
 
 - [GrepAI Documentation](https://yoanbernabeu.github.io/grepai/)
 - [GrepAI GitHub](https://github.com/yoanbernabeu/grepai)
-- [add-skill CLI Documentation](https://add-skill.org)
+- [Skills CLI](https://github.com/vercel-labs/skills) - The open agent skills tool
+- [Skills Directory](https://skills.sh) - Browse available skills
 
 ---
 
