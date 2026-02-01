@@ -204,6 +204,16 @@ Output:
 }
 ```
 
+## TOON Output (v0.26.0+)
+
+TOON format offers ~50% fewer tokens than JSON:
+
+```bash
+grepai trace graph "main" --depth 2 --toon
+```
+
+> **Note:** `--json` and `--toon` are mutually exclusive.
+
 ## Extraction Modes
 
 ```bash

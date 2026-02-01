@@ -133,6 +133,16 @@ Output:
 }
 ```
 
+## TOON Output (v0.26.0+)
+
+TOON format offers ~50% fewer tokens than JSON:
+
+```bash
+grepai trace callees "ProcessOrder" --toon
+```
+
+> **Note:** `--json` and `--toon` are mutually exclusive.
+
 ## Extraction Modes
 
 ### Fast Mode (Default)

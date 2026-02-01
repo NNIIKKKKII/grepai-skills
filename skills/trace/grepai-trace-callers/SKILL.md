@@ -119,6 +119,28 @@ Output:
 }
 ```
 
+## TOON Output (v0.26.0+)
+
+TOON format offers ~50% fewer tokens than JSON:
+
+```bash
+grepai trace callers "Login" --toon
+```
+
+Output:
+```
+callers[3]:
+  - call_site:
+      context: "user.Login(ctx, credentials)"
+      file: handlers/auth.go
+      line: 42
+    symbol:
+      name: HandleAuth
+      ...
+```
+
+> **Note:** `--json` and `--toon` are mutually exclusive.
+
 ## Extraction Modes
 
 GrepAI offers two extraction modes:

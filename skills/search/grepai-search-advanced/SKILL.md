@@ -19,8 +19,11 @@ This skill covers advanced search options including JSON output, compact mode, a
 | Option | Description |
 |--------|-------------|
 | `--limit N` | Number of results (default: 10) |
-| `--json` | JSON output format |
-| `--compact` | Compact JSON (80% token reduction) |
+| `--json` / `-j` | JSON output format |
+| `--toon` / `-t` | TOON output format (~50% fewer tokens than JSON) |
+| `--compact` / `-c` | Compact output (no content, works with --json or --toon) |
+
+> **Note:** `--json` and `--toon` are mutually exclusive.
 
 ## JSON Output
 
@@ -84,6 +87,51 @@ Output:
 - Abbreviated keys (`s` vs `score`, `f` vs `file`)
 - No content (just file locations)
 - ~80% fewer tokens for AI agents
+
+## TOON Output (v0.26.0+)
+
+TOON (Token-Oriented Object Notation) is an even more compact format, optimized for AI agents.
+
+### Standard TOON
+
+```bash
+grepai search "authentication" --toon
+```
+
+Output:
+```
+[2]{content,end_line,file_path,score,start_line}:
+  "func AuthMiddleware()...",45,src/auth/middleware.go,0.89,15
+  "func ValidateToken()...",55,src/auth/jwt.go,0.82,23
+```
+
+### Compact TOON (Best for AI)
+
+```bash
+grepai search "authentication" --toon --compact
+```
+
+Output:
+```
+[2]{end_line,file_path,score,start_line}:
+  45,src/auth/middleware.go,0.89,15
+  55,src/auth/jwt.go,0.82,23
+```
+
+### TOON vs JSON Comparison
+
+| Format | Tokens (5 results) | Best For |
+|--------|-------------------|----------|
+| JSON | ~1,500 | Scripts, parsing |
+| JSON compact | ~300 | AI agents |
+| TOON | ~250 | AI agents |
+| **TOON compact** | **~150** | **Token-constrained AI** |
+
+### When to Use TOON
+
+- **Use TOON** when integrating with AI agents that support it
+- **Use TOON compact** for maximum token efficiency (~50% smaller than JSON compact)
+- **Stick with JSON** for traditional scripting (jq, programming languages)
 
 ## Compact Format Reference
 
@@ -189,22 +237,37 @@ data.results.forEach(r => {
 
 ## MCP Integration
 
-GrepAI provides MCP tools with automatic compact mode:
+GrepAI provides MCP tools with format selection (v0.26.0+):
 
 ```bash
 # Start MCP server
 grepai mcp-serve
 ```
 
-MCP tools use compact format by default:
+MCP tools support JSON (default) or TOON format:
 
-| MCP Tool | Description |
-|----------|-------------|
-| `grepai_search` | Semantic search |
-| `grepai_trace_callers` | Find function callers |
-| `grepai_trace_callees` | Find function callees |
-| `grepai_trace_graph` | Full call graph |
-| `grepai_index_status` | Index health |
+| MCP Tool | Parameters |
+|----------|------------|
+| `grepai_search` | `query`, `limit`, `compact`, `format` |
+| `grepai_trace_callers` | `symbol`, `compact`, `format` |
+| `grepai_trace_callees` | `symbol`, `compact`, `format` |
+| `grepai_trace_graph` | `symbol`, `depth`, `format` |
+| `grepai_index_status` | `format` |
+
+### Format Parameter
+
+```json
+{
+  "name": "grepai_search",
+  "arguments": {
+    "query": "authentication",
+    "format": "toon",
+    "compact": true
+  }
+}
+```
+
+Valid values: `"json"` (default) or `"toon"`
 
 ## Token Optimization
 

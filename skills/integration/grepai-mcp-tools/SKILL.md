@@ -34,7 +34,8 @@ Semantic code search using embeddings.
 |-----------|------|----------|---------|-------------|
 | `query` | string | Yes | - | Search query describing what to find |
 | `limit` | number | No | 10 | Maximum results to return |
-| `compact` | boolean | No | false | Return compact JSON format |
+| `compact` | boolean | No | false | Return compact output (no content) |
+| `format` | string | No | "json" | Output format: "json" or "toon" (v0.26.0+) |
 
 #### Example Request
 
@@ -44,7 +45,8 @@ Semantic code search using embeddings.
   "parameters": {
     "query": "user authentication middleware",
     "limit": 5,
-    "compact": true
+    "compact": true,
+    "format": "toon"
   }
 }
 ```
@@ -92,7 +94,8 @@ Find all functions that call a specified symbol.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `symbol` | string | Yes | - | Function/method name to trace |
-| `compact` | boolean | No | false | Return compact JSON format |
+| `compact` | boolean | No | false | Return compact output (no context) |
+| `format` | string | No | "json" | Output format: "json" or "toon" (v0.26.0+) |
 
 #### Example Request
 
@@ -150,7 +153,8 @@ Find all functions called by a specified symbol.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `symbol` | string | Yes | - | Function/method name to trace |
-| `compact` | boolean | No | false | Return compact JSON format |
+| `compact` | boolean | No | false | Return compact output (no context) |
+| `format` | string | No | "json" | Output format: "json" or "toon" (v0.26.0+) |
 
 #### Example Request
 
@@ -193,6 +197,7 @@ Build a complete call graph starting from a symbol.
 | `symbol` | string | Yes | - | Root function for the graph |
 | `depth` | number | No | 2 | Maximum recursion depth |
 | `compact` | boolean | No | false | Return compact JSON format |
+| `format` | string | No | "json" | Output format: "json" or "toon" (v0.26.0+) |
 
 #### Example Request
 
@@ -273,6 +278,7 @@ Check the health and status of the code index.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `verbose` | boolean | No | false | Include detailed information |
+| `format` | string | No | "json" | Output format: "json" or "toon" (v0.26.0+) |
 
 #### Example Request
 
